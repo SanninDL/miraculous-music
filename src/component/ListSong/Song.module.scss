@@ -1,0 +1,198 @@
+@import '../../helper/variables';
+
+.itemHover {
+	background-color: $primary-color !important;
+	.title,
+	.artists,
+	.mediaIcon {
+		color: white;
+	}
+	.playBtn {
+		opacity: 1;
+		background-color: rgba(0, 0, 0, 0.3);
+
+		transition: all linear 0.25s;
+	}
+
+	.more {
+		display: block;
+	}
+
+	.time {
+		display: none;
+	}
+}
+
+.wrap {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	// background-color: $song-dark-bg;
+	background-color: inherit;
+	border-radius: 8px;
+
+	// border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+	border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
+	&:hover {
+		@extend .itemHover;
+	}
+}
+
+.songPrefix {
+	min-width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.playBtn {
+	font-size: 18px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	position: absolute;
+	border-radius: 4px;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	img {
+		width: 30px;
+		height: 30px;
+		object-fit: cover;
+	}
+	opacity: 0;
+	.playingGif {
+		width: 20px;
+		height: 20px;
+		background-image: url('../../assets/gif/icon-playing.gif');
+		background-size: 18px;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		color: white;
+	}
+}
+.content {
+	display: flex;
+	align-items: center;
+}
+.thumbnail {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	position: relative;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+		border-radius: 4px;
+	}
+}
+
+.info {
+	padding: 0 10px;
+
+	display: flex;
+	gap: 6px 0;
+	flex-direction: column;
+	justify-content: center;
+}
+.title {
+	color: #fff;
+	font-weight: 500;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	line-height: 1.4;
+	font-size: 14px;
+}
+.control {
+	margin-left: auto;
+	font-size: 18px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0 16px;
+}
+.artists {
+	font-size: 12px;
+}
+
+.end {
+	margin-left: 10px;
+
+	width: 40px;
+	text-align: center;
+	flex-shrink: 0;
+	font-size: 14px;
+}
+
+.more {
+	font-size: 22px;
+	color: white;
+	display: none;
+	position: relative;
+	text-align: center;
+}
+.options {
+	position: absolute;
+	top: 150%;
+	right: 0;
+	z-index: 3;
+	padding: 8px;
+
+	width: 200px;
+	background-color: white;
+	border-radius: 10px;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 100%;
+		right: 10px;
+		width: 10px;
+		height: 10px;
+		border-width: 10px;
+		border-style: solid;
+		border-color: transparent transparent white transparent;
+	}
+}
+.option {
+	button {
+		display: flex;
+		align-items: center;
+		text-align: left;
+	}
+
+	padding: 8px;
+	&:hover {
+		span {
+			color: $primary-color;
+			transition: all 0.25s linear;
+		}
+	}
+	ion-icon {
+		color: $primary-color;
+		font-size: 20px;
+	}
+	span {
+		font-size: 15px;
+		margin-left: 10px;
+		color: #777;
+	}
+}
+.number {
+	color: black;
+	-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+	-webkit-text-stroke: 1.5px white;
+	font-size: 32px;
+	font-weight: 900;
+	width: 70px;
+	text-align: center;
+}

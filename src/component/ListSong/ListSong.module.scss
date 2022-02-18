@@ -1,0 +1,48 @@
+@import '../../helper/variables';
+.title {
+	flex: 1;
+	color: $primary-color;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	padding-bottom: 30px;
+	&::after {
+		flex: 1;
+		content: '';
+		height: 4px;
+		margin-left: 10px;
+
+		border-top: 1px solid $primary-color;
+		border-bottom: 1px solid $primary-color;
+	}
+}
+.list {
+}
+.sort {
+	padding-bottom: 8px;
+	color: $body-text-color;
+	display: flex;
+	align-items: center;
+	gap: 0 10px;
+	.icon {
+		font-size: 22px;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+	span {
+		font-size: 14px;
+	}
+}
+
+// ========
+.selectHeader {
+	display: flex;
+	align-items: center;
+	gap: 0 10px;
+	justify-content: flex-end;
+	margin-right: 70px;
+}
+.selectAll {
+	font-size: 20px;
+}

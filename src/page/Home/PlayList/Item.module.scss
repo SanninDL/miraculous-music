@@ -1,0 +1,160 @@
+@import '../../../helper/variables';
+
+.item {
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+.img {
+	position: relative;
+	z-index: 3;
+	img {
+		border-radius: 10px;
+		width: 100%;
+	}
+}
+.info {
+	margin-top: 15px;
+}
+.name {
+	color: white;
+	display: -webkit-box;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	// padding-bottom: 6px;
+	overflow: hidden;
+	&:hover {
+		color: $primary-color;
+	}
+}
+.desc {
+	margin-top: 5px;
+	line-height: 1.2;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	padding-bottom: 2px;
+}
+.item:hover .overlay {
+	opacity: 1;
+	top: 0;
+	.play,
+	.more {
+		opacity: 1;
+		transform: scale(1);
+		transition: all 0.3s ease-in-out;
+		visibility: visible;
+	}
+}
+
+.overlay {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	border-radius: 10px;
+
+	background-image: -webkit-linear-gradient(
+		90deg,
+		rgb(22, 26, 46) 0%,
+		rgb(52, 218, 200) 0%,
+		#ff553e 0%,
+		rgba(32, 167, 196, 0) 100%
+	);
+	transition: all 0.2s linear;
+	opacity: 0;
+}
+.box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.play {
+	width: 40px;
+	height: 40px;
+	margin-right: 20px;
+	img {
+		width: 100%;
+	}
+}
+.more {
+	font-size: 26px;
+	color: white;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 9;
+}
+.play,
+.more {
+	opacity: 0;
+	transform: scale(5);
+	visibility: hidden;
+	cursor: pointer;
+}
+.showOverlay {
+	@extend .overlay;
+	opacity: 1;
+	top: 0;
+	.play,
+	.more {
+		opacity: 1;
+		transform: scale(1);
+		transition: all 0.3s ease-in-out;
+		visibility: visible;
+	}
+}
+.options {
+	position: absolute;
+	top: 150%;
+	right: -50px;
+	z-index: 4;
+	padding: 8px;
+
+	width: 190px;
+	background-color: white;
+	border-radius: 10px;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 100%;
+		right: 50px;
+		width: 10px;
+		height: 10px;
+		border-width: 10px;
+		border-style: solid;
+		border-color: transparent transparent white transparent;
+	}
+}
+.option {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	padding: 8px;
+	&:hover {
+		span {
+			color: $primary-color;
+			transition: all 0.25s linear;
+		}
+	}
+	ion-icon {
+		color: $primary-color;
+		font-size: 20px;
+	}
+	span {
+		font-size: 15px;
+		margin-left: 10px;
+		color: #777;
+	}
+}

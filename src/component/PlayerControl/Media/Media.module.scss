@@ -1,0 +1,77 @@
+@import '../../../helper/variables';
+
+.song {
+	display: flex;
+	align-items: center;
+	gap: 0 16px;
+	// width: 345px;
+	color: black;
+	padding: 10px 0;
+	border-radius: 20px;
+	// background-color: #b2c4d0;
+}
+
+.info {
+	max-width: 180px;
+	flex-basis: auto;
+	flex-grow: 1;
+	flex-shrink: 1;
+	text-align: left;
+	align-self: center;
+	// width: 0;
+}
+
+.titleWrap {
+	display: flex;
+	mask-image: linear-gradient(270deg, transparent 0.5%, #000 10%);
+	-webkit-mask-image: linear-gradient(270deg, transparent 0.5%, #000 10%);
+	// overflow: hidden;
+}
+
+.item {
+	padding-right: 10px;
+}
+.cloneItem {
+	display: none;
+}
+
+.title {
+	display: flex;
+	color: black;
+	white-space: nowrap;
+}
+.artists {
+	color: #333;
+	font-size: 13px;
+	white-space: nowrap;
+	margin-top: 6px;
+}
+.effect {
+	animation: run 6s linear 2s infinite;
+}
+@keyframes run {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+.thumnail {
+	width: 50px;
+	height: 50px;
+	img {
+		width: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}
+.options {
+	background-color: red !important;
+}
+.control {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	gap: 0 10px;
+}

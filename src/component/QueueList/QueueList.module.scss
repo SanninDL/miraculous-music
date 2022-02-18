@@ -1,0 +1,35 @@
+@import '../../helper/variables';
+
+.wrap {
+	padding: 10px;
+	box-shadow: 0px 0px 24px 6px rgba(4, 4, 4, 0.2);
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.heading {
+	flex-shrink: 0;
+
+	color: $primary-color;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	button {
+		font-size: 26px;
+	}
+}
+.list {
+	overflow-y: scroll;
+	flex: 1;
+
+	// max-height: 100%;
+}
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 8px;
+}

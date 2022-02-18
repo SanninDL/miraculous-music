@@ -1,0 +1,21 @@
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 20px 0;
+}
+.avatar {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	img {
+		width: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}
+.name {
+	color: white;
+	font-size: 32px;
+}

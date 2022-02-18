@@ -1,0 +1,77 @@
+@import '../../helper/variables';
+
+$search-height: 40px;
+.wrap {
+	padding: 15px 30px;
+	display: flex;
+	align-items: center;
+
+	gap: 0 20px;
+}
+
+.search {
+	flex: 1;
+	color: $heading-color;
+	line-height: $search-height;
+	max-width: 500px;
+
+	position: relative;
+}
+.inputControl {
+	border-radius: 25px;
+	// background-color: #172533;
+	border: 1px solid #333;
+
+	width: 100%;
+	padding: 0 50px 0 20px;
+
+	width: 100%;
+
+	color: $body-text-color;
+	font-size: 15px;
+	&:focus {
+		box-shadow: 0px 0px 5px rgba($color: #3bc8e7, $alpha: 0.55);
+	}
+}
+.btn {
+	position: absolute;
+	right: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+	button {
+		width: calc($search-height - 8px);
+		background-color: white;
+		height: calc($search-height - 8px);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all linear 0.25s;
+		&:hover {
+			background-color: $primary-color;
+			color: white;
+		}
+	}
+	ion-icon {
+		font-size: 20px;
+		// line-height: $search-height;
+	}
+}
+.auth {
+	button {
+		margin: 0 10px;
+	}
+}
+.info {
+	display: flex;
+	align-items: center;
+	gap: 0 10px;
+}
+.user {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+}
+.avatar {
+	margin-right: 10px;
+}

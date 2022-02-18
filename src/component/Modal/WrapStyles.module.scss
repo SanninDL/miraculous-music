@@ -1,0 +1,48 @@
+@import '../../helper/variables';
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 700px;
+
+	padding: 40px;
+
+	background-color: $primary-color;
+	// background-color: #8acc9e;
+
+	border-radius: 10px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+.left {
+	width: 40%;
+	img {
+		width: 100%;
+	}
+}
+.right {
+	width: 60%;
+	padding: 0 30px;
+}
+.closeBtn {
+	color: white;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 26px;
+}
+.title {
+	color: white;
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+.control {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	gap: 0 20px;
+}

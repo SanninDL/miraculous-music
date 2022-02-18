@@ -1,0 +1,15 @@
+@import '../../helper/variables';
+
+.label {
+	color: white;
+	span {
+		font-style: italic;
+	}
+}
+.result {
+	padding: 30px 0;
+}
+.title {
+	font-size: 20px;
+	color: $primary-color;
+}

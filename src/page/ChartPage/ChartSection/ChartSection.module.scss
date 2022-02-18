@@ -1,0 +1,40 @@
+@import '../../../helper/variables';
+
+.wrap {
+	// background-color: rgba($color: $song-dark-bg, $alpha: 0.4);
+	margin: 20px 0;
+	padding: 30px 20px;
+	border-radius: 20px;
+}
+.heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.title {
+	color: white;
+	font-size: 24px;
+	margin-right: 10px;
+	font-weight: 700;
+}
+
+.playBtn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $primary-color;
+	color: white;
+	justify-content: center;
+	font-size: 24px;
+	&:hover {
+		background-color: white;
+		color: $primary-color;
+		transition: all 0.25s linear;
+	}
+}
+.viewAllBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}

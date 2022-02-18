@@ -1,0 +1,42 @@
+@import '../../helper/variables';
+
+.wrap {
+	position: absolute;
+	z-index: 999;
+	// top: 200px;
+	// left: 200px;
+	height: fit-content;
+	transform: translateX(-100%);
+}
+
+.options {
+	padding: 8px;
+
+	width: 190px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.option {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	cursor: pointer;
+
+	padding: 8px;
+	&:hover {
+		span {
+			color: $primary-color;
+			transition: all 0.25s linear;
+		}
+	}
+	ion-icon {
+		color: $primary-color;
+		font-size: 20px;
+	}
+	span {
+		font-size: 15px;
+		margin-left: 10px;
+		color: #777;
+	}
+}

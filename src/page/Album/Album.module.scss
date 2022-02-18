@@ -1,0 +1,51 @@
+@import '../../helper/variables';
+
+.wrap {
+	padding: 20px 0 40px;
+}
+.left {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 80px;
+}
+
+.thumbnail {
+	display: flex;
+	justify-content: center;
+	img {
+		width: 80%;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+}
+.title {
+	margin: 15px 0 10px;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+}
+
+.artists,
+.like {
+	text-align: center;
+	margin: 6px 0;
+	font-size: 14px;
+	line-height: 1.2;
+}
+.playBtn {
+	text-align: center;
+	margin-top: 16px;
+
+	button {
+		padding: 10px 16px;
+	}
+}
+
+.control {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0 10px;
+	font-size: 20px;
+}

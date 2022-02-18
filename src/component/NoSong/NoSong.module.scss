@@ -1,0 +1,11 @@
+.noSong {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	color: white;
+	.icon {
+		font-size: 60px;
+	}
+}

@@ -1,0 +1,57 @@
+@import '../../../helper/variables';
+
+.wrap {
+	padding: 20px 0;
+}
+.heading {
+	display: flex;
+	align-items: center;
+}
+.title {
+	flex: 1;
+	color: $primary-color;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	&::after {
+		flex: 1;
+		content: '';
+		height: 4px;
+		margin-left: 10px;
+
+		border-top: 1px solid $primary-color;
+		border-bottom: 1px solid $primary-color;
+	}
+}
+.control {
+	margin-left: 20px;
+}
+.prev,
+.next {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	color: $body-text-color;
+	background-color: $side-dark;
+	font-size: 22px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+		color: $primary-color;
+	}
+}
+.prev {
+	margin-right: 10px;
+}
+
+// ================
+.content {
+	padding-top: 30px;
+	overflow-x: hidden;
+}
+.carousel {
+	// width: 100%;
+	overflow: hidden;
+	flex-wrap: nowrap !important;
+}

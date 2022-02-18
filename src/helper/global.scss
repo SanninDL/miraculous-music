@@ -1,0 +1,73 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+html {
+	// font-family: 'Poppins', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+}
+body {
+	background-color: $main-dark-bg;
+	color: $body-text-color;
+	line-height: 1.2;
+	position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+p {
+	font-size: 15px;
+	color: $body-text-color;
+	line-height: 1.2;
+}
+
+// ========
+button {
+	display: inline-flex;
+	align-items: center;
+}
+.button {
+	font-size: 15px;
+	color: white;
+	line-height: 1;
+	padding: 12px 20px;
+	border-radius: 20px;
+	background-color: $primary-color;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0 8px;
+	&:hover {
+		box-shadow: 0px 0px 20px 0px $primary-color;
+		transition: all 0.25s linear;
+	}
+
+	ion-icon {
+		font-size: 20px;
+		background-color: transparent;
+	}
+}
+.buttonSmall {
+	@extend .button;
+	font-size: 13px;
+	padding: 4px 8px;
+	gap: 0 4px;
+}
+.buttonTransparent {
+	@extend .button;
+
+	color: $primary-color;
+	// padding: 10px;
+	border: 1px solid $primary-color;
+	background-color: white;
+	&:hover {
+		background-color: $primary-color;
+		border-color: white;
+		color: white;
+	}
+}

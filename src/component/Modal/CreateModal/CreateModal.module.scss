@@ -1,0 +1,34 @@
+@import '../../../helper/variables';
+
+.form {
+	margin-top: 30px;
+}
+.inputControl {
+	margin-bottom: 16px;
+
+	input {
+		border-radius: 20px;
+		border: 1px solid $gray-color;
+		background-color: white;
+		padding: 0 15px;
+		width: 100%;
+		line-height: 40px;
+		font-size: 16px;
+		color: #666;
+		&::placeholder {
+			// color: $primary-color;
+			opacity: 0.8;
+		}
+	}
+	.error {
+		margin-top: 8px;
+		height: 20px;
+		color: white;
+		text-align: left;
+		display: flex;
+		align-items: center;
+		span {
+			margin-left: 4px;
+		}
+	}
+}
