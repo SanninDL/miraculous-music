@@ -6,7 +6,7 @@
 ## Uses
 
 - Listen music from Zing Mp3 database (song, album, zing chart)
-- Search artist, song, download song
+- Search artist, song. Download song
 - Login and add song, album to your library. Create your custom playlist.
 
 ## Technologies
