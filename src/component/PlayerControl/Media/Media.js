@@ -39,13 +39,21 @@ export default function Media({ song }) {
 		},
 	]
 
+	const titleWrapRef = useRef(null)
 	const titleRef = useRef(null)
+	const itemRef = useRef(null)
+	const cloneItemRef = useRef(null)
 	useEffect(() => {
-		if (titleRef.current) {
-			const wrapTitle = titleRef.current
-			const item = wrapTitle.querySelector(`.${styles.item}`)
-			const title = wrapTitle.querySelector(`.${styles.title}`)
-			const cloneItem = title.querySelector(`.${styles.cloneItem}`)
+		if (
+			titleRef.current &&
+			titleWrapRef.current &&
+			itemRef.current &&
+			cloneItemRef.current
+		) {
+			const wrapTitle = titleWrapRef.current
+			const item = itemRef.current
+			const title = titleRef.current
+			const cloneItem = cloneItemRef.current
 			if (isPlay) {
 				if (item.offsetWidth > wrapTitle.offsetWidth) {
 					cloneItem.style.display = 'block'
@@ -64,10 +72,14 @@ export default function Media({ song }) {
 				<img src={song.thumbnail} alt='' />
 			</div>
 			<div className={styles.info}>
-				<div className={styles.titleWrap} ref={titleRef}>
-					<div className={styles.title}>
-						<h3 className={styles.item}>{song.title}</h3>
-						<h3 className={styles.cloneItem}>{song.title}</h3>
+				<div className={styles.titleWrap} ref={titleWrapRef}>
+					<div className={styles.title} ref={titleRef}>
+						<h3 className={styles.item} ref={itemRef}>
+							{song.title}
+						</h3>
+						<h3 className={styles.cloneItem} ref={cloneItemRef}>
+							{song.title}
+						</h3>
 					</div>
 				</div>
 				<p className={styles.artists}>{song.artistsNames}</p>

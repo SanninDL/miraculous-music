@@ -11,7 +11,7 @@ import { add, addPlaylist } from '../../features/queue/queueSlice'
 import styles from './Album.module.scss'
 
 export default function Album() {
-	const { customPlaylists, playlists } = useSelector((state) => state.library)
+	const { customPlaylists } = useSelector((state) => state.library)
 	const { encodeId } = useParams()
 	const dispatch = useDispatch()
 	const [album, setAlbum] = useState(null)

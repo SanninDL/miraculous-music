@@ -1,12 +1,11 @@
 import { useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setAnchorOptions } from '../../features/status/statusSlice'
 import styles from './MoreButton.module.scss'
 
 export default function MoreButton({ options }) {
 	const moreIconRef = useRef(null)
 	const dispatch = useDispatch()
-	// const { anchorOptions } = useSelector((state) => state.status)
 	const isShowRef = useRef(false)
 
 	const handleClick = () => {

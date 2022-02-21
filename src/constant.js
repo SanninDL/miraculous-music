@@ -3,10 +3,9 @@ import {
 	arrayUnion,
 	doc,
 	getDoc,
-	setDoc,
 	updateDoc,
 } from 'firebase/firestore'
-import { setPendingCreate, toggleModal } from './features/status/statusSlice'
+import { toggleModal } from './features/status/statusSlice'
 import { db } from './firebase/config'
 import store from './store/store'
 

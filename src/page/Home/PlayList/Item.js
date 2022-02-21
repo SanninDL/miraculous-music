@@ -19,7 +19,6 @@ export default function Item({ item }) {
 	const navigate = useNavigate()
 
 	const itemRef = useRef(null)
-	const moreIconRef = useRef(null)
 
 	document.onmousedown = (e) => {
 		const target = e.target
