@@ -54,7 +54,6 @@ export default function PlayerControl() {
 						dispatch(secondRender)
 					}
 				} else {
-					dispatch(next())
 					setLoading(false)
 					dispatch(
 						addToast({
