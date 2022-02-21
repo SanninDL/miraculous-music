@@ -1,0 +1,40 @@
+@import '../../../helper/variables';
+
+.wrap {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 40px;
+}
+.img {
+	margin: 10px 0;
+}
+.text {
+	text-align: center;
+	p {
+		color: white;
+		margin-bottom: 6px;
+		font-size: 18px;
+	}
+}
+.message {
+	width: 60%;
+	text-align: center;
+	color: white;
+	line-height: 1.5;
+}
+@include maxWidth(576px) {
+	.wrap {
+		padding: 0 15px;
+	}
+	.message {
+		width: 80%;
+	}
+}
+@include maxWidth(280px) {
+	.message {
+		width: 100%;
+	}
+}

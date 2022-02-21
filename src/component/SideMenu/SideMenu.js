@@ -41,7 +41,7 @@ export default function SideMenu({ sideMenuOpen, setSideMenuOpen }) {
 					<div className={styles.logo}>
 						<img src={logo} alt='' />
 					</div>
-					{sideMenuOpen && <h4 className={styles.title}>The Miraculous</h4>}
+					{sideMenuOpen && <h1 className={styles.title}>The Miraculous</h1>}
 				</div>
 			</Link>
 			<div

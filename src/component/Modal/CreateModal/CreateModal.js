@@ -26,8 +26,6 @@ export default function CreateModal() {
 	}
 
 	const handleCreate = () => {
-		console.log('tao moi')
-
 		if (input) {
 			console.log('value ', input)
 			const id = uuidv4()

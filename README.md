@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# The Miraculous Music Player
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Live: https://miraculous-music.netlify.app/
+- Api: https://miraculous-music.herokuapp.com/api (base module Zing Mp3 API. Thank phamhiep2506)
 
-## Available Scripts
+## Uses
 
-In the project directory, you can run:
+- Listen music from Zing Mp3 database (song, album, zing chart)
+- Search artist, song
+- Login and add song, album to your library. Create your custom playlist.
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- HTML, SCSS, Javascript,
+- Frameworks : React JS, Redux Toolkit
+- Libraries: Axios, Material UI
+- Database: Firebase
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshot
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot library](https://user-images.githubusercontent.com/86120861/154896845-334a1891-35fe-4c5d-9574-969ff2c57d9a.png)
+![Screenshot chart](https://user-images.githubusercontent.com/86120861/154896850-ec8775b9-355b-4fa8-9c0e-82620057dc25.png)
+![Screenshot album](https://user-images.githubusercontent.com/86120861/154896851-36bee6eb-9a68-49a3-98d3-9d86ea1aefaf.png)
+![screencapture-miraculous-music-netlify-app-home](https://user-images.githubusercontent.com/86120861/154896853-b67200b7-eef3-49f6-848f-3ca3ca573253.png)

@@ -1,5 +1,5 @@
 import { Slider } from '@mui/material'
-import React, { useContext, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { PlayerContext } from '../PlayerControl'
 import styles from './Volume.module.scss'
 
@@ -10,11 +10,17 @@ export default function Volume() {
 	const prevVolumeRef = useRef(1)
 	const wrapRef = useRef(null)
 
-	document.onclick = (event) => {
-		if (!wrapRef.current.contains(event.target)) {
-			setShowVolume(false)
+	useEffect(() => {
+		const click = (event) => {
+			if (!wrapRef.current.contains(event.target)) {
+				setShowVolume(false)
+			}
 		}
-	}
+		window.addEventListener('click', click)
+		return () => {
+			window.removeEventListener('click', click)
+		}
+	}, [])
 
 	const onChangeVolume = (value) => {
 		handleChangeVolume(value)

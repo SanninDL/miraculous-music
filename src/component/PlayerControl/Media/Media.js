@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toggleAddToPlaylistModal } from '../../../features/status/statusSlice'
 import Heart from '../../Heart/Heart'
 import MoreButton from '../../MoreButton/MoreButton'
-import Popover from '../../Popover/Popover'
 import styles from './Media.module.scss'
 
 export default function Media({ song }) {

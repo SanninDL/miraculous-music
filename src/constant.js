@@ -6,7 +6,9 @@ import {
 	setDoc,
 	updateDoc,
 } from 'firebase/firestore'
+import { setPendingCreate, toggleModal } from './features/status/statusSlice'
 import { db } from './firebase/config'
+import store from './store/store'
 
 export const addSongToLibrary = async (payload, user) => {
 	if (user) {
@@ -15,12 +17,10 @@ export const addSongToLibrary = async (payload, user) => {
 			songs: arrayUnion(payload),
 		})
 	} else {
-		console.log('vui long dang nhap')
+		store.dispatch(toggleModal(true))
 	}
 }
 export const removeSongFromLibrary = async (payload, user) => {
-	console.log('remove')
-
 	if (user) {
 		const libraryRef = doc(db, 'library', user.uid)
 
@@ -35,7 +35,7 @@ export const removeSongFromLibrary = async (payload, user) => {
 			})
 		}
 	} else {
-		console.log('vui long dang nhap')
+		store.dispatch(toggleModal(true))
 	}
 }
 export const addPlayListToLibrary = async (item, user, isCustom = false) => {
@@ -52,7 +52,7 @@ export const addPlayListToLibrary = async (item, user, isCustom = false) => {
 			})
 		}
 	} else {
-		console.log('vui long dang nhap')
+		store.dispatch(toggleModal(true))
 	}
 }
 export const removePlaylistfromLibrary = async (

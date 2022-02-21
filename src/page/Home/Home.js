@@ -21,7 +21,6 @@ export default function Home() {
 				const banner = page1.data.items.find(
 					(item) => item.sectionType === 'banner'
 				).items
-				setBanner(banner)
 
 				const pages = [2, 3, 4]
 				const allResult = await Promise.all(pages.map(getPage))
@@ -33,6 +32,8 @@ export default function Home() {
 				const playlist = allPage.filter(
 					(item) => item.sectionType === 'playlist'
 				)
+				setBanner(banner)
+
 				setPlaylist(playlist)
 			} catch (error) {
 				console.log(error)

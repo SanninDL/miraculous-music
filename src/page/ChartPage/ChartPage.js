@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { musicApi } from '../../api/musicApi'
 import styles from './ChartPage.module.scss'
 import ChartSection from './ChartSection/ChartSection'
+import Spinner from '../../component/Spinner/Spinner'
 
 export default function ChartPage() {
 	const [chart, setChart] = useState(null)
@@ -39,7 +40,7 @@ export default function ChartPage() {
 			<div className={styles.section}>
 				<div className={styles.heading}>Zing Chart</div>
 
-				{chart && <ChartSection list={chart} title='#zingchart' />}
+				{chart ? <ChartSection list={chart} title='#zingchart' /> : <Spinner />}
 			</div>
 			{weekChart && (
 				<div className={styles.section}>

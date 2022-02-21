@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 // import playingGif from '../../assets/gif/icon-playing.gif'
 import { useDispatch, useSelector } from 'react-redux'
+import { musicApi } from '../../api/musicApi'
 import playBtn from '../../assets/svg/playBtn.svg'
 import { add, addPlaylist, playInQueue } from '../../features/queue/queueSlice'
 import { toggleAddToPlaylistModal } from '../../features/status/statusSlice'
@@ -60,16 +61,7 @@ export default function Song({
 		{
 			icon: <ion-icon name='download-outline'></ion-icon>,
 			label: 'Tải xuống',
-			onClick: () => {
-				console.log('click')
-			},
-		},
-		{
-			icon: <ion-icon name='share-social-outline'></ion-icon>,
-			label: 'Chia sẻ',
-			onClick: () => {
-				console.log('click')
-			},
+			onClick: () => {},
 		},
 	]
 

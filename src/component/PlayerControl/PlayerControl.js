@@ -43,10 +43,6 @@ export default function PlayerControl() {
 		}
 		const getApi = async () => {
 			try {
-				// const song = await musicApi.getSongInfo({ id: currentSong })
-				// if (song.data) {
-				// 	setSong(song.data)
-				// }
 				const audio = await musicApi.getSong({ id: currentSong.encodeId })
 				if (audio.data) {
 					if (!isFirstRender) {

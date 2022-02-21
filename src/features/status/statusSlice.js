@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { auth } from '../../firebase/config'
 import createToast from './createToast'
 
 const initialState = {
@@ -11,6 +10,7 @@ const initialState = {
 	user: null,
 	toasts: [],
 	anchorOptions: { anchor: null, options: null },
+	isRender: window.innerWidth < 992 ? false : true,
 }
 const statusSlice = createSlice({
 	name: 'status',
@@ -58,6 +58,9 @@ const statusSlice = createSlice({
 				(toast) => !(toast.id === action.payload)
 			)
 		},
+		setIsRender: (state, action) => {
+			state.isRender = action.payload
+		},
 	},
 })
 
@@ -71,5 +74,6 @@ export const {
 	setAnchorOptions,
 	addToast,
 	removeToast,
+	setIsRender,
 } = actions
 export default reducer

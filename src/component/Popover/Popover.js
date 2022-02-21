@@ -12,8 +12,6 @@ function Popover(props, ref) {
 	const popoverRef = useRef(null)
 
 	const windowHeight = window.innerHeight
-	const windowWidth = window.innerWidth
-	//  windowH -top < popH ==> bottom: top,
 
 	const position = {
 		top: windowHeight - anchor.top < 100 ? 'unset' : `${anchor.top}px`,

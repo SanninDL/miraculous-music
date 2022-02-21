@@ -1,0 +1,23 @@
+@import '../../helper/variables';
+.number {
+	color: white;
+	font-size: 200px;
+	position: relative;
+	-webkit-text-stroke: 2px $primary-color;
+}
+.shap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		height: 200px;
+	}
+}
+.text {
+	text-align: center;
+}
+.btn {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}

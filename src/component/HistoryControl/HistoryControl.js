@@ -3,7 +3,6 @@ import styles from './HistoryControl.module.scss'
 
 export default function HistoryControl() {
 	const navigate = useNavigate()
-	console.log(navigate)
 
 	return (
 		<div className={styles.wrap}>
