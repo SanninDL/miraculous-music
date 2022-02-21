@@ -3,6 +3,8 @@
 - Live: https://miraculous-music.netlify.app/
 - Api: https://miraculous-music.herokuapp.com/api (base module Zing Mp3 API. Thank phamhiep2506)
 
+ ### Note
+ - Some songs may not be able to load, so you should choose Vietnamese songs.
 ## Uses
 
 - Listen music from Zing Mp3 database (song, album, zing chart)
