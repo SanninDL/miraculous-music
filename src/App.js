@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import './App.scss'
 import Header from './component/Header/Header'
 import AddToPlaylistModal from './component/Modal/AddToPlaylistModal/AddToPlaylistModal'
+import Pending from './component/Pending/Pending'
 import PlayerControl from './component/PlayerControl/PlayerControl'
 import Popover from './component/Popover/Popover'
 import SideMenu from './component/SideMenu/SideMenu'
@@ -39,6 +40,7 @@ export default function App() {
 		toasts,
 		anchorOptions,
 		isRender,
+		isPendingDownload,
 	} = useSelector((state) => state.status)
 	// check width of window first time
 	useEffect(() => {
@@ -137,6 +139,8 @@ export default function App() {
 								<Header />
 							</div>
 							{toasts.length > 0 && <Toasts />}
+							{isPendingDownload && <Pending />}
+							{/* <Pending /> */}
 							<div className='main'>
 								<Routes>
 									<Route path='/' element={<Home />} />

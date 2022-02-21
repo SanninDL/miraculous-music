@@ -13,7 +13,7 @@ import styles from './Item.module.scss'
 
 export default function Item({ item }) {
 	const [showOptions, setshowOptions] = useState(false)
-	const { playlists } = useSelector((state) => state.library)
+	const { playlists, customPlaylists } = useSelector((state) => state.library)
 	const { user } = useSelector((state) => state.status)
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
@@ -51,14 +51,15 @@ export default function Item({ item }) {
 			}
 		}
 	}
-	const isOwner = playlists.find((i) => i.encodeId === item.encodeId)
+	const isOwner =
+		playlists.find((i) => i.encodeId === item.encodeId) ||
+		customPlaylists.find((i) => i.encodeId === item.encodeId)
 
 	const options = [
 		{
 			icon: <ion-icon name='heart-outline'></ion-icon>,
 			label: isOwner ? 'Xóa khỏi thư viện' : 'Thêm vào thư viện',
 			onClick: () => {
-				console.log('them/xóa vao thu vien')
 				if (isOwner) {
 					removePlaylistfromLibrary(item, user)
 				} else {
@@ -79,13 +80,6 @@ export default function Item({ item }) {
 				} catch (error) {
 					console.log(error)
 				}
-			},
-		},
-		{
-			icon: <ion-icon name='share-social-outline'></ion-icon>,
-			label: 'Chia sẻ',
-			onClick: () => {
-				console.log('chia se')
 			},
 		},
 	]

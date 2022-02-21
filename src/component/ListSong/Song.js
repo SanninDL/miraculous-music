@@ -1,14 +1,18 @@
 import React, { useEffect, useRef } from 'react'
-// import playingGif from '../../assets/gif/icon-playing.gif'
 import { useDispatch, useSelector } from 'react-redux'
 import { musicApi } from '../../api/musicApi'
 import playBtn from '../../assets/svg/playBtn.svg'
 import { add, addPlaylist, playInQueue } from '../../features/queue/queueSlice'
-import { toggleAddToPlaylistModal } from '../../features/status/statusSlice'
+import {
+	addToast,
+	setPendingDownload,
+	toggleAddToPlaylistModal,
+} from '../../features/status/statusSlice'
 import formatDuration from '../../store/formatDuration'
 import Heart from '../Heart/Heart'
 import MoreButton from '../MoreButton/MoreButton'
 import styles from './Song.module.scss'
+import { saveAs } from 'file-saver'
 
 export default function Song({
 	song,
@@ -49,7 +53,6 @@ export default function Song({
 			icon: <ion-icon name='add-circle-outline'></ion-icon>,
 			label: 'Thêm vào playlist',
 			onClick: () => {
-				console.log('them vao playlist')
 				dispatch(
 					toggleAddToPlaylistModal({
 						isOpen: true,
@@ -61,7 +64,25 @@ export default function Song({
 		{
 			icon: <ion-icon name='download-outline'></ion-icon>,
 			label: 'Tải xuống',
-			onClick: () => {},
+			onClick: () => {
+				dispatch(setPendingDownload(true))
+				const getAudio = async () => {
+					const audio = await musicApi.getSong({ id: song.encodeId })
+					if (audio.data) {
+						const link = audio.data['128']
+						saveAs(link, `${song.title}.mp3`)
+					} else {
+						dispatch(
+							addToast({
+								type: 'error',
+								message: 'Tải thất bại, bài hát không có ở quốc gia của bạn',
+							})
+						)
+					}
+					dispatch(setPendingDownload(false))
+				}
+				getAudio()
+			},
 		},
 	]
 

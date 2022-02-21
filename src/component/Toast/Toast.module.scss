@@ -24,6 +24,10 @@
 
 	background-color: rgb(46, 125, 50);
 }
+.warningToast {
+	@extend %toast;
+	background-color: #f0ad4e;
+}
 .icon {
 	display: inline-flex;
 	align-items: center;

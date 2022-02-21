@@ -34,10 +34,12 @@ export default function SongsLibrary({ renderSongs }) {
 							<ion-icon name='chevron-forward-outline'></ion-icon>
 						</button>
 					)}
-					<button className='buttonSmall' onClick={handlePlayAll}>
-						<ion-icon name='play-outline'></ion-icon>
-						<span>Phát tất cả</span>
-					</button>
+					{renderSongs && renderSongs.length > 0 && (
+						<button className='buttonSmall' onClick={handlePlayAll}>
+							<ion-icon name='play-outline'></ion-icon>
+							<span>Phát tất cả</span>
+						</button>
+					)}
 				</div>
 			</div>
 			<div className={styles.songContent}>

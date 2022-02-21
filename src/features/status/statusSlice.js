@@ -7,6 +7,7 @@ const initialState = {
 	isShowAddToPlaylistModal: false,
 	songNeedAdd: null,
 	isPendingCreate: false,
+	isPendingDownload: false,
 	user: null,
 	toasts: [],
 	anchorOptions: { anchor: null, options: null },
@@ -44,6 +45,9 @@ const statusSlice = createSlice({
 				state.isShowCreateModal = true
 			}
 		},
+		setPendingDownload: (state, action) => {
+			state.isPendingDownload = action.payload
+		},
 		setAnchorOptions: (state, action) => {
 			state.anchorOptions = action.payload
 		},
@@ -75,5 +79,6 @@ export const {
 	addToast,
 	removeToast,
 	setIsRender,
+	setPendingDownload,
 } = actions
 export default reducer

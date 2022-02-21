@@ -11,7 +11,7 @@ export default function Toast({ toast }) {
 	useEffect(() => {
 		const timeOut = setTimeout(() => {
 			dispatch(removeToast(toast.id))
-		}, 5000)
+		}, 3000)
 		return () => {
 			clearTimeout(timeOut)
 		}
