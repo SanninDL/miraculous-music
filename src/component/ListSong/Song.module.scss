@@ -27,11 +27,9 @@
 	padding: 10px;
 	display: flex;
 	align-items: center;
-	// background-color: $song-dark-bg;
 	background-color: inherit;
 	border-radius: 8px;
 
-	// border-top: 1px solid hsla(0, 0%, 100%, 0.05);
 	border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
 	&:hover {
 		@extend .itemHover;

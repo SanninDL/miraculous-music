@@ -5,9 +5,9 @@ import {
 	getDoc,
 	updateDoc,
 } from 'firebase/firestore'
-import { toggleModal } from './features/status/statusSlice'
-import { db } from './firebase/config'
-import store from './store/store'
+import { toggleModal } from '../status/statusSlice'
+import { db } from '../../firebase/config'
+import store from '../../store/store'
 
 export const addSongToLibrary = async (payload, user) => {
 	if (user) {

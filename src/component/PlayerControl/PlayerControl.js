@@ -22,7 +22,6 @@ export default function PlayerControl() {
 
 	const dispatch = useDispatch()
 	const [audio, setAudio] = useState(null)
-	// const [song, setSong] = useState(null)
 	const [showQueue, setShowQueue] = useState(false)
 	// ====
 	const [currentTime, setCurrentTime] = useState(0)
@@ -142,7 +141,6 @@ export default function PlayerControl() {
 							onTimeUpdate={() => {
 								setCurrentTime(audioRef.current?.currentTime)
 							}}
-							// autoPlay={false}
 							onEnded={handleEnd}
 							ref={audioRef}
 							loop={isRepeat}

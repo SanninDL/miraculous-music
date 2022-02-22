@@ -19,8 +19,6 @@ export default function LoginModal() {
 	const handleLogin = async () => {
 		const { _tokenResponse, user } = await signInWithPopup(auth, provider)
 		try {
-			// lưu user vào local storage
-
 			dispatch(toggleModal(false))
 			// lưu vào firestore nếu là user mới
 			if (_tokenResponse.isNewUser) {

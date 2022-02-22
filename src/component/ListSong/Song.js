@@ -27,8 +27,6 @@ export default function Song({
 
 	const songRef = useRef(null)
 
-	// console.log('render', showOptions)
-
 	useEffect(() => {
 		if (currentSong?.encodeId === song.encodeId && renderInQueue) {
 			if (songRef.current) {
@@ -146,32 +144,9 @@ export default function Song({
 				{!renderInQueue && (
 					<div className={styles.end}>
 						<span className={styles.time}>{formatDuration(song.duration)}</span>
-
-						{/* <Popover options={options} position='bottom' /> */}
 						<div className={styles.more}>
 							<MoreButton options={options} />
 						</div>
-						{/* <button
-							className={styles.more}
-							onClick={handleClick}
-							ref={moreIconRef}>
-							<ion-icon name='ellipsis-horizontal-sharp'></ion-icon>
-						</button> */}
-						{/* <Popover options={options} /> */}
-						{/* {showOptions && (
-								<div className={styles.options} ref={optionsRef}>
-									<ul>
-										{options.map((option, index) => (
-											<li key={index} className={styles.option}>
-												<button onClick={option.onClick}>
-													{option.icon}
-													<span>{option.label}</span>
-												</button>
-											</li>
-										))}
-									</ul>
-								</div>
-							)} */}
 					</div>
 				)}
 			</div>

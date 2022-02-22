@@ -8,7 +8,7 @@ import {
 import styles from './AddToPlaylistModal.module.scss'
 import wrapStyles from '../WrapStyles.module.scss'
 import playlistIcon from '../../../assets/svg/playlist.svg'
-import { addSongToCustomPlaylist } from '../../../constant'
+import { addSongToCustomPlaylist } from '../../../features/library/libraryAction'
 import { useMemo } from 'react'
 
 export default function AddToPlaylistModal(props) {
@@ -19,7 +19,6 @@ export default function AddToPlaylistModal(props) {
 	const dispatch = useDispatch()
 	const [playlist, setPlaylist] = useState('')
 
-	// const customPlaylists = props.customPlaylists
 	useEffect(() => {
 		if (customPlaylists.length > 0) {
 			setPlaylist(customPlaylists[0].encodeId)
@@ -79,7 +78,6 @@ export default function AddToPlaylistModal(props) {
 											textAlign: 'left',
 										}}
 										onChange={handleChangeSelect}>
-										{/* <MenuItem value={10}>Ten</MenuItem> */}
 										{renderOptionsEle}
 									</Select>
 								) : (
@@ -107,11 +105,3 @@ export default function AddToPlaylistModal(props) {
 		</div>
 	)
 }
-
-// function mapStateToProps(state, ownProps) {
-// 	return {
-// 		customPlaylists: state.library.customPlaylists,
-// 	}
-// }
-
-// export default connect(mapStateToProps)(AddToPlaylistModal)

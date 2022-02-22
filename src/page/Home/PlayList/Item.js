@@ -5,9 +5,9 @@ import { musicApi } from '../../../api/musicApi'
 import playBtn from '../../../assets/svg/playBtn.svg'
 import MoreButton from '../../../component/MoreButton/MoreButton'
 import {
-	addPlayListToLibrary,
 	removePlaylistfromLibrary,
-} from '../../../constant'
+	addPlayListToLibrary,
+} from '../../../features/library/libraryAction'
 import { add } from '../../../features/queue/queueSlice'
 import styles from './Item.module.scss'
 

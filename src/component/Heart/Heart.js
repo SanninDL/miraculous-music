@@ -6,13 +6,11 @@ import {
 	addSongToLibrary,
 	removePlaylistfromLibrary,
 	removeSongFromLibrary,
-} from '../../constant'
+} from '../../features/library/libraryAction'
 
 export default function Heart({ song, album }) {
 	const { user } = useSelector((state) => state.status)
 	const { songs, playlists } = useSelector((state) => state.library)
-
-	// const allPlaylists = [...playlists, ...customPlaylists]
 
 	const handleHeartClick = () => {
 		if (song) {

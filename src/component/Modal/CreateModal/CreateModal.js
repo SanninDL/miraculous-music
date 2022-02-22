@@ -3,12 +3,10 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid'
 import playlistIcon from '../../../assets/svg/playlist.svg'
-import { addPlayListToLibrary } from '../../../constant'
+import { addPlayListToLibrary } from '../../../features/library/libraryAction'
 import { toggleCreateModal } from '../../../features/status/statusSlice'
 import styles from './CreateModal.module.scss'
 import wrapStyles from '../WrapStyles.module.scss'
-
-// import albumDefault from '../../assets/image/album_default.png'
 
 export default function CreateModal() {
 	const { isShowCreateModal, user } = useSelector((state) => state.status)

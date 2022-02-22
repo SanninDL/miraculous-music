@@ -21,7 +21,6 @@
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 1;
-	// padding-bottom: 6px;
 	overflow: hidden;
 	&:hover {
 		color: $primary-color;
@@ -111,50 +110,5 @@
 		transform: scale(1);
 		transition: all 0.3s ease-in-out;
 		visibility: visible;
-	}
-}
-.options {
-	position: absolute;
-	top: 150%;
-	right: -50px;
-	z-index: 4;
-	padding: 8px;
-
-	width: 190px;
-	background-color: white;
-	border-radius: 10px;
-	&::before {
-		content: '';
-		display: block;
-		position: absolute;
-		bottom: 100%;
-		right: 50px;
-		width: 10px;
-		height: 10px;
-		border-width: 10px;
-		border-style: solid;
-		border-color: transparent transparent white transparent;
-	}
-}
-.option {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-
-	padding: 8px;
-	&:hover {
-		span {
-			color: $primary-color;
-			transition: all 0.25s linear;
-		}
-	}
-	ion-icon {
-		color: $primary-color;
-		font-size: 20px;
-	}
-	span {
-		font-size: 15px;
-		margin-left: 10px;
-		color: #777;
 	}
 }

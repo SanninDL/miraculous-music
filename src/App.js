@@ -42,6 +42,7 @@ export default function App() {
 		isRender,
 		isPendingDownload,
 	} = useSelector((state) => state.status)
+
 	// check width of window first time
 	useEffect(() => {
 		const w = window.innerWidth
@@ -51,7 +52,20 @@ export default function App() {
 			dispatch(setIsRender(true))
 		}
 	}, [dispatch])
+	//  check window width
+	useEffect(() => {
+		const resizeListener = () => {
+			const w = window.innerWidth
+			if (w < 992) {
+				dispatch(setIsRender(false))
+			} else {
+				dispatch(setIsRender(true))
+			}
+		}
+		window.addEventListener('resize', resizeListener)
+	}, [dispatch])
 
+	// luu queue vao localStorage
 	useEffect(() => {
 		const value = {
 			render,
@@ -64,6 +78,7 @@ export default function App() {
 		localStorage.setItem('music', JSON.stringify(value))
 	}, [render, list, isRepeat, isRandom, currentSong])
 
+	// luu user vao redux
 	useEffect(() => {
 		onAuthStateChanged(auth, (currentuser) => {
 			if (currentuser) {
@@ -83,6 +98,7 @@ export default function App() {
 		})
 	}, [dispatch])
 
+	//luu library vao redux
 	useEffect(() => {
 		if (user) {
 			const unsub = onSnapshot(doc(db, 'library', user.uid), (doc) => {
@@ -96,18 +112,6 @@ export default function App() {
 			}
 		}
 	}, [user, dispatch, isPendingCreate])
-	//  check window width
-	useEffect(() => {
-		const resizeListener = () => {
-			const w = window.innerWidth
-			if (w < 992) {
-				dispatch(setIsRender(false))
-			} else {
-				dispatch(setIsRender(true))
-			}
-		}
-		window.addEventListener('resize', resizeListener)
-	}, [dispatch])
 
 	return (
 		<>
@@ -140,7 +144,6 @@ export default function App() {
 							</div>
 							{toasts.length > 0 && <Toasts />}
 							{isPendingDownload && <Pending />}
-							{/* <Pending /> */}
 							<div className='main'>
 								<Routes>
 									<Route path='/' element={<Home />} />

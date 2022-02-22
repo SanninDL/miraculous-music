@@ -11,7 +11,7 @@ export default function Banner({ banner }) {
 
 	const handleClickBanner = (item) => {
 		if (item.type === 1) {
-			// type la bai hat
+			// type : song
 			const getApi = async () => {
 				try {
 					const song = await musicApi.getSongInfo({ id: item.encodeId })
@@ -23,7 +23,7 @@ export default function Banner({ banner }) {
 			}
 			getApi()
 		} else {
-			//type la alnum
+			//type : album
 			navigate(`/album/${item.encodeId}`)
 		}
 	}

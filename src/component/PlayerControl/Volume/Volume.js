@@ -62,7 +62,6 @@ export default function Volume() {
 						onChange={(_, value) => onChangeVolume(value)}
 						sx={{
 							color: '#1ed760',
-							// backgroundColor: '#aebed3',
 							padding: ' 0 !important',
 							boxSizing: 'content-box !important',
 							'& .MuiSlider-thumb': {
