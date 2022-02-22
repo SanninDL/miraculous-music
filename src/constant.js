@@ -66,6 +66,7 @@ export const removePlaylistfromLibrary = async (
 		const customPlaylistRemove = libratySnap
 			.data()
 			.customPlaylists.find((playlist) => playlist.encodeId === item.encodeId)
+
 		await updateDoc(libraryRef, {
 			customPlaylists: arrayRemove(customPlaylistRemove),
 		})

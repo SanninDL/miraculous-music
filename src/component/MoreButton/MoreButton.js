@@ -8,13 +8,22 @@ export default function MoreButton({ options }) {
 	const dispatch = useDispatch()
 	const isShowRef = useRef(false)
 
-	const handleClick = () => {
+	const handleClick = (e) => {
+		// console.log([moreIconRef.current])
 		if (isShowRef.current) {
 			dispatch(setAnchorOptions({ anchor: null, options: null }))
 			isShowRef.current = false
 		} else {
-			const moreIcon = moreIconRef.current
-			const rect = moreIcon.getBoundingClientRect()
+			// const moreIcon = moreIconRef.current
+			const moreIcon = e.target
+			console.log(e.pageX)
+			console.log(e.pageY)
+			const rect = {
+				x: e.pageX,
+				y: e.pageY,
+			}
+			// const rect = moreIcon.getBoundingClientRect()
+			console.log(rect)
 			const payload = {
 				anchor: rect,
 				options: options,

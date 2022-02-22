@@ -61,7 +61,7 @@ export default function Item({ item }) {
 			label: isOwner ? 'Xóa khỏi thư viện' : 'Thêm vào thư viện',
 			onClick: () => {
 				if (isOwner) {
-					removePlaylistfromLibrary(item, user)
+					removePlaylistfromLibrary(item, user, Boolean(item.isPrivate))
 				} else {
 					addPlayListToLibrary(item, user)
 				}

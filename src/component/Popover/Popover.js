@@ -14,12 +14,10 @@ function Popover(props, ref) {
 	const windowHeight = window.innerHeight
 
 	const position = {
-		top: windowHeight - anchor.top < 100 ? 'unset' : `${anchor.top}px`,
-		left: `${anchor.left}px`,
+		top: windowHeight - anchor.y < 100 ? 'unset' : `${anchor.y}px`,
+		left: `${anchor.x}px`,
 		bottom:
-			windowHeight - anchor.top < 100
-				? `${windowHeight - anchor.top}px`
-				: 'unset',
+			windowHeight - anchor.y < 100 ? `${windowHeight - anchor.y}px` : 'unset',
 	}
 
 	const handleClose = useCallback(() => {

@@ -27,7 +27,6 @@ export default function CreateModal() {
 
 	const handleCreate = () => {
 		if (input) {
-			console.log('value ', input)
 			const id = uuidv4()
 			const playlist = {
 				encodeId: id,
