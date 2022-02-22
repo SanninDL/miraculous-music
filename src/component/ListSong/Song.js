@@ -30,7 +30,7 @@ export default function Song({
 	// console.log('render', showOptions)
 
 	useEffect(() => {
-		if (currentSong?.encodeId === song.encodeId) {
+		if (currentSong?.encodeId === song.encodeId && renderInQueue) {
 			if (songRef.current) {
 				songRef.current.scrollIntoView({
 					behavior: 'smooth',
@@ -39,7 +39,7 @@ export default function Song({
 				})
 			}
 		}
-	}, [currentSong, song, showQueue])
+	}, [currentSong, song, showQueue, renderInQueue])
 
 	const options = [
 		{
